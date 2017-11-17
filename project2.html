@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset = "utf-8">
+
+  <style>
+
+  #Img2{
+float: left;
+  }
+  #r1, #r2, #q1{
+    background-color: lime;
+  }
+  #q2, #r3, #q3, #r4, #q4, #r5, #q5, #r6, #r7, #r8, #r9, #r10, #r11{
+    background-color: grey;
+  }
+  #table{
+
+
+
+
+
+    width:500px;
+
+  }
+  #Img{
+    position: absolute;
+left: 535px;
+  }
+
+  </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body background="images/images.jpg">
+
+
+
+
+
+<script>
+var i = 0;
+var unlock = 0;
+var array = ['https://www.youtube.com/embed/Mp0f0zTPLec', 'https://www.youtube.com/embed/qseNjA-73Fw','https://www.youtube.com/embed/eDR7zpVfX_4' ,'https://www.youtube.com/embed/go5U9wfM9h4','https://www.youtube.com/embed/a5KD47HDRho','https://www.youtube.com/embed/0pb81VdSO_E','https://www.youtube.com/embed/JaLebQ-QDVo','https://www.youtube.com/embed/tIznbrsfQZQ' ,'https://www.youtube.com/embed/Q7eoOSZ7JdY', 'https://www.youtube.com/embed/P71U-doyzNg','https://www.youtube.com/embed/8uTNq7fs5-s','https://www.youtube.com/embed/yNtIO4X6cag','https://www.youtube.com/embed/tzAEGnBNAn0','https://www.youtube.com/embed/xgYmccJ61eA','https://www.youtube.com/embed/bi7ccKky8JU','https://www.youtube.com/embed/F1uzS6PAjuc','https://www.youtube.com/embed/iTEgQP87IhQ','https://www.youtube.com/embed/6L2DQkf0oR8','https://www.youtube.com/embed/s_4zvAMU4BY','https://www.youtube.com/embed/fCU641pu6ys','https://www.youtube.com/embed/ritFiWDm08g','https://www.youtube.com/embed/jRWGqBUNk_c', 'https://www.youtube.com/embed/Ie1h8KgoDtg','https://www.youtube.com/embed/WCsuxaqpQP8','https://www.youtube.com/embed/L-FM97j7MyY','https://www.youtube.com/embed/f15cVPPbjMI','https://www.youtube.com/embed/Gas8f7dJfWc','https://www.youtube.com/embed/_JbFcQF5OR4','https://www.youtube.com/embed/p1bTTHVhlfM','https://www.youtube.com/embed/d8PRA5kqL9s','https://www.youtube.com/embed/M9dUfcmpuJY','https://www.youtube.com/embed/wX0CdtO_1T0','https://www.youtube.com/embed/6Ag9Gnv0o_8','https://www.youtube.com/embed/FtvGVpSg4wA','https://www.youtube.com/embed/wyaEthRt330','https://www.youtube.com/embed/t51omnjifl0','https://www.youtube.com/embed/FWB7SF9TM-A','https://www.youtube.com/embed/1RdNGbfT_ok','https://www.youtube.com/embed/Pa9ASGA3m8U','https://www.youtube.com/embed/vU_wNPd3R_Q','https://www.youtube.com/embed/mqP8aWI758Q','https://www.youtube.com/embed/HM112U8pOWk','https://www.youtube.com/embed/4nRg5ljNpsc','https://www.youtube.com/embed/Kfi3uRJS6hA','https://www.youtube.com/embed/-2qhd7uJkn8','https://www.youtube.com/embed/SWR5ojeSmvM','https://www.youtube.com/embed/e6t-8EoT2HM','https://www.youtube.com/embed/PN0RgFnRxAQ','https://www.youtube.com/embed/Xq9KKJfbzg4','https://www.youtube.com/embed/AUOe6E7GgP8','https://www.youtube.com/embed/1pz9zExrj5o','https://www.youtube.com/embed/zG-mivHf1_I','https://www.youtube.com/embed/Kn_AIiV6Cp0'];
+var iframe = document.createElement('iframe');
+var html = '<body>Foo</body>';
+iframe.src = array[0];
+iframe.align = "center";
+iframe.width = "560";
+iframe.height = "315";
+
+document.body.appendChild(iframe);
+console.log('iframe.contentWindow =', iframe.contentWindow);
+
+function myFunction(){
+  if(i < unlock*10 + 9){
+  i++;
+  console.log("clicked");
+
+  iframe.src = array[i];
+}else {
+  window.alert("this lesson has not been unlocked yet, please complete the checkpoint quiz");
+}
+}
+function myThirdFunction(){
+  i--;
+  console.log("clicked");
+
+  iframe.src = array[i];
+
+}
+function mySecondFunction(newVar){
+  if(newVar < unlock*10 + 10){
+  i = newVar;
+  console.log("clicked");
+
+  iframe.src = array[i];}else {
+    window.alert("this lesson has not been unlocked yet, please complete the checkpoint quiz");
+  }
+
+
+
+
+}
+function checkPointOneQuiz(){
+var answer = prompt("checkpoint one quiz \n enter true or false");
+if(answer == "true"){
+  unlock = 1;
+window.alert("Correct! you have unlocked lessonss 11 through 20");
+var newGreen = document.getElementById("r4");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("r3");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("q2");
+newGreen.style.backgroundColor = "lime";}
+ else {
+  window.alert("wrong answer, please take the quiz again to unlock lessons 11 through 20");
+}}
+function checkPointTwoQuiz(){
+  if(unlock >= 1){
+var answer = prompt("checkpoint one quiz \n enter true or false");
+if(answer == "true"){
+  unlock = 2;
+window.alert("Correct! you have unlocked lessonss 21 through 30");
+var newGreen = document.getElementById("r5");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("r6");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("q3");
+newGreen.style.backgroundColor = "lime";}
+ else {
+  window.alert("wrong answer, please take the quiz again to unlock lessons 21 through 30");
+}}
+else{
+  window.alert("this quiz has not been unlocked yet, you must complete quiz one first");
+}}
+function checkPointThreeQuiz(){
+  if(unlock>=2){
+var answer = prompt("checkpoint one quiz \n enter true or false");
+if(answer == "true"){
+  unlock = 3;
+window.alert("Correct! you have unlocked lessonss 31 through 40");
+var newGreen = document.getElementById("r7");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("r8");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("q4");
+newGreen.style.backgroundColor = "lime";}
+ else {
+  window.alert("wrong answer, please take the quiz again to unlock lessons 31 through 40");
+}} else {
+  window.alert("this quiz has not been unlocked yet, you must complete quiz two first");
+}}
+function checkPointFourQuiz(){
+  if(unlock>=3){
+var answer = prompt("checkpoint one quiz \n enter true or false");
+if(answer == "true"){
+  unlock = 4;
+window.alert("Correct! you have unlocked lessonss 41 through 50");
+var newGreen = document.getElementById("r9");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("r10");
+newGreen.style.backgroundColor = "lime";
+newGreen = document.getElementById("q5");
+newGreen.style.backgroundColor = "lime";}
+ else {
+  window.alert("wrong answer, please take the quiz again to unlock lessons 41 through 50");
+}}else {
+  window.alert("this quiz has not been unlocked yet, you must complete quiz three first");
+}}
+function checkPointFiveQuiz(){
+  if(unlock>=4){
+var answer = prompt("checkpoint one quiz \n enter true or false");
+if(answer == "true"){
+  unlock = 5;
+window.alert("Correct! you have unlocked lessonss 51 through 53");
+var newGreen = document.getElementById("r11");
+newGreen.style.backgroundColor = "lime";
+
+}
+ else {
+  window.alert("wrong answer, please take the quiz again to unlock lessons 51 through 53");
+}}else {
+  window.alert("this quiz has not been unlocked yet, you must complete quiz four first");
+}}
+
+
+
+function outputname(){
+
+  var x, y, name, a, b, answer;
+  var name1 = prompt('Ask a question');
+console.log(name1);
+
+
+
+
+
+
+
+    var theQ = document.createElement('p')
+    theQ.innerHTML = name1;
+
+
+var ourDiv = document.getElementById("our-div");
+var para = document.getElementById("our-paragraph");
+var newHeading = document.createElement("h1");
+var headingText = document.createTextNode(name1);
+newHeading.appendChild(headingText);
+ourDiv.insertBefore(newHeading, para);
+
+console.log("question asked");
+
+}
+
+</script>
+<div id="container">
+<br/>
+<img id="Img2" src="images/previous.jpg" onclick="myThirdFunction()" />
+<img id="Img"  src="images/next.jpg" onclick="myFunction()" />
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<table id ="table">
+<tr id = "r1" >
+  <td onclick="mySecondFunction(0)">
+      <a href="#1">Lesson 1</a>
+  </td>
+  <td onclick="mySecondFunction(1)">
+      <a href="#1">Lesson 2</a>
+  </td>
+  <td onclick="mySecondFunction(2)">
+      <a href="#1">Lesson 3</a>
+  </td>
+  <td onclick="mySecondFunction(3)">
+      <a href="#1">Lesson 4</a>
+  </td>
+  <td onclick="mySecondFunction(4)">
+      <a href="#1">Lesson 5</a>
+  </td>
+</tr>
+<tr id = "r2" >
+  <td onclick="mySecondFunction(5)">
+      <a href="#1">Lesson 6</a>
+  </td>
+  <td onclick="mySecondFunction(6)">
+      <a href="#1">Lesson 7</a>
+  </td>
+  <td onclick="mySecondFunction(7)">
+      <a href="#1">Lesson 8</a>
+  </td>
+  <td onclick="mySecondFunction(8)">
+      <a href="#1">Lesson 9</a>
+  </td>
+  <td onclick="mySecondFunction(9)">
+      <a href="#1">Lesson 10</a>
+  </td>
+</tr>
+<tr id = "q1" >
+  <td onclick="checkPointOneQuiz()">
+      <a href="#1">Check Point One Quiz</a>
+  </td>
+</tr>
+<tr id = "r3" >
+  <td onclick="mySecondFunction(10)">
+      <a href="#1">Lesson 11</a>
+  </td>
+  <td onclick="mySecondFunction(11)">
+      <a href="#1">Lesson 12</a>
+  </td>
+  <td onclick="mySecondFunction(12)">
+      <a href="#1">Lesson 13</a>
+  </td>
+  <td onclick="mySecondFunction(13)">
+      <a href="#1">Lesson 14</a>
+  </td>
+  <td onclick="mySecondFunction(14)">
+      <a href="#1">Lesson 15</a>
+  </td>
+</tr>
+<tr id = "r4" >
+  <td onclick="mySecondFunction(15)">
+      <a href="#1">Lesson 16</a>
+  </td>
+  <td onclick="mySecondFunction(16)">
+      <a href="#1">Lesson 17</a>
+  </td>
+  <td onclick="mySecondFunction(17)">
+      <a href="#1">Lesson 18</a>
+  </td>
+  <td onclick="mySecondFunction(18)">
+      <a href="#1">Lesson 19</a>
+  </td>
+  <td onclick="mySecondFunction(19)">
+      <a href="#1">Lesson 20</a>
+  </td>
+</tr>
+<tr id = "q2" >
+  <td onclick="checkPointTwoQuiz()">
+      <a href="#1">Check Point Two Quiz</a>
+  </td>
+</tr>
+<tr id = "r5" >
+  <td onclick="mySecondFunction(20)">
+      <a href="#1">Lesson 21</a>
+  </td>
+  <td onclick="mySecondFunction(21)">
+      <a href="#1">Lesson 22</a>
+  </td>
+  <td onclick="mySecondFunction(22)">
+      <a href="#1">Lesson 23</a>
+  </td>
+  <td onclick="mySecondFunction(23)">
+      <a href="#1">Lesson 24</a>
+  </td>
+  <td onclick="mySecondFunction(24)">
+      <a href="#1">Lesson 25</a>
+  </td>
+</tr>
+<tr id = "r6" >
+  <td onclick="mySecondFunction(25)">
+      <a href="#1">Lesson 26</a>
+  </td>
+  <td onclick="mySecondFunction(26)">
+      <a href="#1">Lesson 27</a>
+  </td>
+  <td onclick="mySecondFunction(27)">
+      <a href="#1">Lesson 28</a>
+  </td>
+  <td onclick="mySecondFunction(28)">
+      <a href="#1">Lesson 29</a>
+  </td>
+  <td onclick="mySecondFunction(29)">
+      <a href="#1">Lesson 30</a>
+  </td>
+</tr>
+<tr id = "q3" >
+  <td onclick="checkPointThreeQuiz()">
+      <a href="#1">Check Point Three Quiz</a>
+  </td>
+</tr>
+<tr id = "r7" >
+  <td onclick="mySecondFunction(30)">
+      <a href="#1">Lesson 31</a>
+  </td>
+  <td onclick="mySecondFunction(31)">
+      <a href="#1">Lesson 32</a>
+  </td>
+  <td onclick="mySecondFunction(32)">
+      <a href="#1">Lesson 33</a>
+  </td>
+  <td onclick="mySecondFunction(33)">
+      <a href="#1">Lesson 34</a>
+  </td>
+  <td onclick="mySecondFunction(34)">
+      <a href="#1">Lesson 35</a>
+  </td>
+</tr>
+<tr id = "r8" >
+  <td onclick="mySecondFunction(35)">
+      <a href="#1">Lesson 36</a>
+  </td>
+  <td onclick="mySecondFunction(36)">
+      <a href="#1">Lesson 37</a>
+  </td>
+  <td onclick="mySecondFunction(37)">
+      <a href="#1">Lesson 38</a>
+  </td>
+  <td onclick="mySecondFunction(38)">
+      <a href="#1">Lesson 39</a>
+  </td>
+  <td onclick="mySecondFunction(39)">
+      <a href="#1">Lesson 40</a>
+  </td>
+</tr>
+<tr id = "q4" >
+  <td onclick="checkPointFourQuiz()">
+      <a href="#1">Check Point Four Quiz</a>
+  </td>
+</tr>
+<tr id = "r9" >
+  <td onclick="mySecondFunction(40)">
+      <a href="#1">Lesson 41</a>
+  </td>
+  <td onclick="mySecondFunction(41)">
+      <a href="#1">Lesson 42</a>
+  </td>
+  <td onclick="mySecondFunction(42)">
+      <a href="#1">Lesson 43</a>
+  </td>
+  <td onclick="mySecondFunction(43)">
+      <a href="#1">Lesson 44</a>
+  </td>
+  <td onclick="mySecondFunction(44)">
+      <a href="#1">Lesson 45</a>
+  </td>
+</tr>
+<tr id = "r10" >
+  <td onclick="mySecondFunction(45)">
+      <a href="#1">Lesson 46</a>
+  </td>
+  <td onclick="mySecondFunction(46)">
+      <a href="#1">Lesson 47</a>
+  </td>
+  <td onclick="mySecondFunction(47)">
+      <a href="#1">Lesson 48</a>
+  </td>
+  <td onclick="mySecondFunction(48)">
+      <a href="#1">Lesson 49</a>
+  </td>
+  <td onclick="mySecondFunction(49)">
+      <a href="#1">Lesson 50</a>
+  </td>
+</tr>
+<tr id = "q5" >
+  <td onclick="checkPointFiveQuiz()">
+      <a href="#1">Check Point Five Quiz</a>
+  </td>
+</tr>
+<tr id = "r11" >
+  <td onclick="mySecondFunction(50)">
+      <a href="#1">Lesson 51</a>
+  </td>
+  <td onclick="mySecondFunction(51)">
+      <a href="#1">Lesson 52</a>
+  </td>
+  <td onclick="mySecondFunction(52)">
+      <a href="#1">Lesson 53</a>
+
+</tr>
+
+</table>
+<br/>
+
+<button onclick="outputname()">ask a question</button>
+
+<div id ="our-div">
+  <p id ="our-paragraph"> </p>
+</div>
+</div>
+</body>
+</html>
